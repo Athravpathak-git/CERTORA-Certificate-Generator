@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Rounded Base Background -->
+  <rect width="64" height="64" rx="16" fill="#182536"/>
+  <rect x="2" y="2" width="60" height="60" rx="14" stroke="#C4A878" stroke-width="2" stroke-opacity="0.8"/>
+  
+  <!-- Graduation Cap (Mortarboard) on top of C -->
+  <polygon points="32,7 15,15 32,23 49,15" fill="#182536" stroke="#C4A878" stroke-width="2"/>
+  <!-- Tassel -->
+  <path d="M22 18V28" stroke="#C4A878" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="22" cy="29" r="1.5" fill="#C4A878"/>
+  
+  <!-- Stylized Monogram 'C' in Midnight Navy / Gold -->
+  <path d="M46 29C43 25 38 23 32 23C21 23 13 31 13 42C13 53 21 61 32 61C39 61 44 58 47 53" 
+        stroke="#C4A878" stroke-width="5" stroke-linecap="round" fill="none"/>
+  
+  <!-- Certificate / Document Symbol inside C -->
+  <rect x="26" y="30" width="16" height="20" rx="2" fill="#263B50" stroke="#C4A878" stroke-width="1.5"/>
+  <path d="M29 35H39M29 39H37M29 43H35" stroke="#F5F1E8" stroke-width="1.2" stroke-linecap="round"/>
+  
+  <!-- Gold Medal / Award Ribbon at bottom right -->
+  <circle cx="45" cy="45" r="7" fill="#C4A878" stroke="#182536" stroke-width="1.5"/>
+  <path d="M45 41L46.2 43.8L49 44.2L47 46.2L47.5 49L45 47.7L42.5 49L43 46.2L41 44.2L43.8 43.8Z" fill="#182536"/>
+</svg>

@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Sans Bold Uploaded Font Integration */
+@font-face {
+  font-family: 'Google Sans';
+  src: url('/fonts/GoogleSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Google Sans';
+  src: url('/fonts/GoogleSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Google Sans Bold';
+  src: url('/fonts/GoogleSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Google Sans Bold';
+  src: url('/fonts/GoogleSans-Bold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-google-sans {
+  font-family: 'Google Sans', 'Google Sans Bold', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-google-sans-bold {
+  font-family: 'Google Sans', 'Google Sans Bold', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+}
+
+@layer base {
+  body {
+    background-color: #FAF8F5;
+    color: #253246;
+    @apply antialiased font-sans;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Form controls light luxury defaults */
+  input, select, textarea {
+    background-color: #FFFFFF;
+    color: #253246;
+    border-color: #E8E5DD;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: #77818C;
+    opacity: 0.7;
+  }
+}
+
+/* Custom Clean Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F1E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D2C5;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C4A878;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Certificate Canvas Shadow */
+.cert-canvas-shadow {
+  box-shadow: 0 20px 50px -12px rgba(24, 37, 54, 0.2), 0 0 1px 1px rgba(24, 37, 54, 0.08);
+}
+
+/* Button & Card Component Utility Classes */
+@layer components {
+  /* Primary Button: Champagne Gold */
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all duration-150 active:scale-95 disabled:opacity-40 disabled:pointer-events-none;
+    background-color: #C4A878;
+    color: #182536;
+    box-shadow: 0 4px 14px -2px rgba(196, 168, 120, 0.3);
+  }
+  .btn-gold:hover {
+    background-color: #D2BC92;
+  }
+
+  /* Primary Button: Midnight Blue */
+  .btn-midnight {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all duration-150 active:scale-95 disabled:opacity-40 disabled:pointer-events-none;
+    background-color: #182536;
+    color: #FFFFFF;
+    box-shadow: 0 4px 14px -2px rgba(24, 37, 54, 0.25);
+  }
+  .btn-midnight:hover {
+    background-color: #263B50;
+  }
+
+  /* Secondary Button: Clean white with subtle border */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-150 active:scale-95 disabled:opacity-40 disabled:pointer-events-none;
+    background-color: #FFFFFF;
+    color: #253246;
+    border: 1px solid #E8E5DD;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  }
+  .btn-secondary:hover {
+    background-color: #FAF8F5;
+    border-color: #C4A878;
+    color: #182536;
+  }
+
+  /* Deep button alias */
+  .btn-deep {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-150 active:scale-95 disabled:opacity-40 disabled:pointer-events-none;
+    background-color: #182536;
+    color: #FFFFFF;
+  }
+  .btn-deep:hover {
+    background-color: #263B50;
+  }
+
+  /* Outline Button */
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl font-medium text-xs sm:text-sm transition-all duration-150 active:scale-95 disabled:opacity-40 disabled:pointer-events-none;
+    background-color: #FFFFFF;
+    color: #253246;
+    border: 1px solid #E8E5DD;
+  }
+  .btn-outline:hover {
+    background-color: #FAF8F5;
+    border-color: #C4A878;
+    color: #182536;
+  }
+
+  /* Danger Button */
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-150 active:scale-95 disabled:opacity-40 disabled:pointer-events-none;
+    background-color: rgba(198, 107, 107, 0.1);
+    color: #C66B6B;
+    border: 1px solid rgba(198, 107, 107, 0.25);
+  }
+  .btn-danger:hover {
+    background-color: rgba(198, 107, 107, 0.2);
+    border-color: #C66B6B;
+  }
+
+  /* Clean Light Luxury Card */
+  .card-clean {
+    background-color: #FFFFFF;
+    border: 1px solid #E8E5DD;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px -2px rgba(24, 37, 54, 0.05);
+  }
+
+  /* Backwards compatibility for card-luxury: now clean and light! */
+  .card-luxury {
+    background-color: #FFFFFF;
+    border: 1px solid #E8E5DD;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px -2px rgba(24, 37, 54, 0.05);
+  }
+
+  /* Clean Input */
+  .input-clean {
+    background-color: #FFFFFF;
+    color: #253246;
+    border: 1px solid #E8E5DD;
+    border-radius: 0.75rem;
+    padding: 0.5rem 0.875rem;
+    font-size: 0.875rem;
+    transition: all 0.15s ease-out;
+  }
+  .input-clean:focus {
+    outline: none;
+    border-color: #C4A878;
+    box-shadow: 0 0 0 2px rgba(196, 168, 120, 0.25);
+  }
+
+  /* Backwards compatibility for input-luxury */
+  .input-luxury {
+    background-color: #FFFFFF;
+    color: #253246;
+    border: 1px solid #E8E5DD;
+    border-radius: 0.75rem;
+    padding: 0.5rem 0.875rem;
+    font-size: 0.875rem;
+    transition: all 0.15s ease-out;
+  }
+  .input-luxury:focus {
+    outline: none;
+    border-color: #C4A878;
+    box-shadow: 0 0 0 2px rgba(196, 168, 120, 0.25);
+  }
+}
